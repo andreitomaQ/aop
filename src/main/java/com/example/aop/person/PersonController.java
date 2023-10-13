@@ -2,9 +2,12 @@ package com.example.aop.person;
 
 import com.example.aop.person.log.Log;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+import static org.springframework.http.HttpStatus.CREATED;
 
 @RestController
 @RequestMapping("/persons")
@@ -26,6 +29,7 @@ public class PersonController {
     }
 
     @Log
+    @ResponseStatus(CREATED)
     @PostMapping
     public Person createPerson(@RequestBody Person person) {
         return personService.createOrUpdatePerson(person);

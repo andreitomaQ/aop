@@ -9,6 +9,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class PersonService {
+
     private final PersonRepository personRepository;
 
     @Log
