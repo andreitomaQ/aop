@@ -1,0 +1,8 @@
+Key concepts:
+Business object -> normal class that has a normal business logic
+Aspect -> modularization of a concern that cuts across multiple classes (eg. logging)
+JoinPoint -> a point during the execution of the program (eg. method execution)
+Pointcut -> predicate that helps match an Advice to be applied by an Aspect at a particular JoinPoint
+Advice -> action taken by an Aspect at a particular JoinPoint (eg. before, after, around)
+       -> in Spring is modelled as an interceptor (maintaining a chain of interceptors around the JoinPoint)
+
